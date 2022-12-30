@@ -11,7 +11,7 @@ function setSkillBars(){
     for (var Skill in SkillBars){
         if (SkillBars.hasOwnProperty(Skill)){
             let percent = SkillBars[Skill].getAttribute('data-percent');
-            SkillBars[Skill].style.backgroundImage='linear-gradient(to right,var(--discord-lightergray) 0% ' + percent + ' ,var(--discord-lightestgray) ' + percent + ' 100%)';
+            SkillBars[Skill].style.backgroundImage='linear-gradient(to right,var(--discord-lightestgray) 0% ' + percent + ' ,var(--discord-lightergray) ' + percent + ' 100%)';
         }
     }
 }
