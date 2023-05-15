@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="Assets/Resume-Icon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <title>Tony Bodulovic - Personal Portfolio</title>
+
+</head>
+
+<body>
+
+    <dialog style="position: fixed; justify-self: center; top: 25%; height: 40%; width: 70%; z-index: 10;" open>
+        <p>This site is being remade.</p>
+        <p>Please check back again later</p>
+        <p>-</p>
+        <form method="dialog">
+          <button>OK</button>
+        </form>
+      </dialog>
+
+    <header>
+        <!-- <nav class="CNav" id="CNav">
+
+        </nav> -->
+        <nav class="Nav" id="Nav">
+            <h1 id="Nav-Initials">TB</h1>
+            <ul class="Nav-ItemHolder">
+                <li class="Nav-Item">
+                    <button class="Nav-Button">
+                        <a href="#Home">
+                            Home
+                        </a>
+                    </button>
+                </li>
+                <li class="Nav-Item">
+                    <button class="Nav-Button">
+                        <a href="#About">
+                            About
+                        </a>
+                    </button>
+                </li>
+                <li class="Nav-Item">
+                    <button class="Nav-Button">Skills</button>
+                </li>
+                <li class="Nav-Item">
+                    <button class="Nav-Button">Portfolio</button>
+                </li>
+                <li class="Nav-Item">
+                    <button class="Nav-Button">Contact</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside id="LeftBar" class="SideBar">
+        <div class="SideBarSpacer SideBarSpacerTop"></div>
+        <a href="mailto:tonybodulovic2000@gmail.com">tonybodulovic2000@gmail.com</a>
+        <div class="SideBarSpacer SideBarSpacerBottom"></div>
+    </aside>
+
+    <div class="content">
+        <section class="Con_Section" id="Home">
+            <div id="Title">
+                <div>
+                    <h1>Tony Bodulovic</h1>
+                    <h2>Software Developer</h2>
+                </div>
+                <img id="MyPicture" src="Assets/Tony.png">
+            </div>
+            <div id="Description">
+                <p>Hi, my name is Tony. I'm a 22 year old software developer skilled in a variety of languages, programs and tools.</p>
+                <p>Currently working on my &ltb&gt <b>Web Development</b> &lt/b&gt</p>
+                <p>My latest project is a chrome extension for saving and tracking your clipboard history called <a href="#">Clipboard Plus</a></p>
+                <p>Take a look at my <a href="#">GitHub</a> to see some other projects I'm working on. Not all of my projects are available on GitHub yet, and I plan to push them soon.</p>
+            </div>
+            
+            
+        </section>
+        <!-- <div class="SectionSplitter"></div> -->
+        <section class="Con_Section" id="About">
+            <div id="PartOne">
+                <div>
+                    <h1>About Me</h1>
+                    <p>My introduction to coding was through video games, making custom configurations in the source engine. Of course this isn't <i>really</i> programming, but it was enough to get me interested in the real thing. Soon enough I was learning scripting languages like AutoHotkey and eventually using Python to help me in my games.</p>
+                    <p>So, I grew older and decided to pursue a degree in Computer Science. I studied at Wilfrid Laurier and now I'm continuing my path into software development.</p>
+                </div>
+                <img src="Assets/CSGO Console.png">
+            </div>
+            <div id="PartTwo">
+                <img src="Assets/CSGO Console.png">
+                <div>
+                    <p>Throughout university I've worked on a number of different types of projects. Cryptography, image processing, android programming, data structures, text retrieval, I learned a whole variety of skills.</p>
+                    <p>As of the present, I'm furthering my skills and developing projects such as this website. I'm also actively pursuing my software devloping career.</p>
+                </div>
+            </div>
+
+        </section>
+        <section id="">
+
+        </section>
+    </div>
+
+    <footer>
+        <button onclick='window.open("https:\/\/github.com/TonyBodulovic")'>
+            <div class="svg" id="GitHub">
+                <a href="https://github.com/TonyBodulovic">
+                    <img src="Assets/GitHub.svg">
+                </a>
+            </div>
+        </button>
+        <button onclick='window.open("https:\/\/www.linkedin.com/in/tony-bodulovic/")'>
+                <div class="svg" id="LinkedIn">
+                    <a href="https://www.linkedin.com/in/tony-bodulovic/">
+                        <img src="Assets/LinkedIn.svg">
+                    </a>
+                </div>
+        </button>
+        <button class="DiscordButton" onclick="showDiscord()">
+            <div id="DiscordPopup"><p id="DiscordName">Tony Bodulovic#7537</p></div>
+            <div class="svg" id="Discord">
+                <img src="Assets/Discord.svg">
+            </div>
+        </button>
+    </footer>
+
+</body>
+
+<script type="text/javascript" src="functions.js"></script>
+</html>
