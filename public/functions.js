@@ -88,3 +88,16 @@ function showdiscord(){
         }
     });
 }
+
+// Debug
+
+
+function debug(){
+
+    NoJS = document.getElementById("NoJSBody");
+    JS = document.getElementById("JSBody");
+
+    JS.classList.toggle("hidden");
+    NoJS.classList.toggle('hidden');
+
+}

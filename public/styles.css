@@ -1,3 +1,5 @@
+/* GROUP Themes */
+
 html[data-theme=purple] {
   --primarytext: #e7e9ee;
   --alttext: #080808;
@@ -19,6 +21,8 @@ html[data-theme=blue] {
   --secondary: #173766;
   --accent: #03e2ff;
 }
+
+/* GROUP HTML and Body */
 
 html {
   background-color: var(--background);
@@ -57,6 +61,8 @@ body::-webkit-scrollbar-thumb {
   padding: 0px;
 }
 
+/* GROUP Defaults */
+
 p {
   color: var(--primarytext);
   font-size: 1.3rem;
@@ -69,6 +75,23 @@ h1 {
 h2 {
   color: var(--subheading);
 }
+
+/* VERSION JS Disabled */
+
+.debug {
+  position: absolute;
+  top:90%;
+  bottom: 10%;
+  left:1%;
+}
+
+nav.NoJS {
+  display: block;
+}
+
+/* VERSION JS Enabled */
+
+/* GROUP NAV */
 
 nav {
   display: flex;
@@ -183,6 +206,8 @@ aside img:hover {
   display: none;
 }
 
+/* GROUP Sections */
+
 section {
   display: flex;
   flex-direction: column;
@@ -225,7 +250,7 @@ section {
   padding: 0px;
   margin-bottom: 40px;
   background-color: var(--primary);
-  border-radius: 20px 30% 20px 30%;
+  border-radius: 20px;
   border: 3px solid var(--secondary);
 }
 
