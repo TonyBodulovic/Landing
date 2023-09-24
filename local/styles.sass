@@ -1,5 +1,7 @@
 // THEMES
 
+// GROUP Color Themes
+
 html[data-theme='purple']
   --primarytext: #e7e9ee
   --alttext: #080808
@@ -26,6 +28,11 @@ html[data-theme='blue']
   --primary: #0d233d
   --secondary: #173766
   --accent: #03e2ff
+
+.debug
+  top: 70%
+  left: 1%
+  position: absolute
 
 //HTML
 
@@ -154,22 +161,44 @@ aside
   display: flex
   flex-direction: column
   position: absolute
-  justify-content: center
-  top: 0
-  bottom: 0
-  left: 10px
+  justify-items: center
+  align-items: center
+  top: 40%
+  left: 15px
+  height: fit-content
+  padding-left: 6px
+  padding-right: 6px
+  padding-top: 10px
+  padding-bottom: 5px
+  border-radius: 20px 
+  background: var(--primary)
+
+  & div
+    margin-top: 7px
+
+  & a
+    margin-top: 7px 
+
   & img
-    height: 30px
-    margin-top: 15px
+    padding: 6px
+    height: 32px
+    margin-top: 7px
+    align-self: center
+    border-radius: 25%
 
     &:hover
       cursor: pointer
-      transform: translate(2px)
+      background: var(--secondary)
+
+  & img:first-child
+    margin-top: 0px
+    
+
+
 
 #DiscordAside
   display: flex
   position: relative
-  justify-content: center
 
 .DiscordPopup
   display: flex
@@ -264,10 +293,8 @@ section
     margin-bottom: 40px 
 
     background-color: var(--primary)
-    // box-shadow: 20px 20px rgb(40,40,40)
 
-    // border-radius: 0px 20px 0px 20px
-    border-radius: 20px 30% 20px 30%
+    border-radius: 20px
     border: 3px solid var(--secondary)
 
 .HomeSplitter
@@ -292,6 +319,9 @@ section
   grid-template-rows: auto auto
   column-gap: 50px
   row-gap: 20px
+  margin-bottom: 40px
+
+  scroll-margin-top: 200px
 
   height: fit-content
 
@@ -308,7 +338,7 @@ section
 
   display: grid
   grid-template-columns: 1fr
-  grid-template-rows: auto 1fr auto
+  grid-template-rows: auto auto auto
 
   justify-items: center
   align-items: center
@@ -322,18 +352,21 @@ section
   border-radius: 10px
   border: 2px solid var(--secondary)
 
+  overflow: hidden
+
 .About-CarouselTitlesContainer
   position: relative
   display: flex
   overflow: hidden
 
   margin: 0px
+  margin-top: -5px
   padding: 0px
 
   height: 70px
   width: 100%
 
-  border-radius: 8px 8px 0px 0px
+  border-radius: 2px 2px 0px 0px
 
   background-color: var(--secondary)
 
@@ -434,11 +467,12 @@ section
   flex-direction: row
 
   min-width: 100%
-  max-height: 300px
 
   overflow: hidden
 
   scroll-behavior: smooth
+
+  border-bottom: 2px solid var(--secondary)
 
   & div
     display: flex
@@ -453,8 +487,8 @@ section
     justify-self: center
     align-self: center
 
-    max-width: 95%
-    max-height: 95%
+    max-width: 90%
+    max-height: 90%
 
     border-radius: 4px
 
@@ -465,8 +499,8 @@ section
   align-items: center
 
   width: 80%
-  max-height: 50px
 
+  margin-top: 0px
   margin-left: 20px
   margin-right: 20px
   margin-bottom: 10px
@@ -489,7 +523,7 @@ section
   justify-content: center
   align-items: center
 
-  margin-top: 7.5%
+  margin-top: 0px
 
   & button
     display: flex
@@ -522,7 +556,13 @@ section
 
 .AboutUnlocked
   margin-top: 50px
+  margin-bottom: 50px 
+  max-height: 1000px
+  scroll-margin-top: 1500px
   overflow: hidden
+  transition: margin-top 1s
+  transition: margin-bottom 1s
+  transition: max-height 1s
 
 //SKILLS
 
@@ -589,7 +629,7 @@ section
   padding-bottom: 0px
   padding-left: 40px
   padding-right: 40px
-  min-width: calc(100% - 72px)
+  min-width: calc(100% - 80px)
   overflow-y: scroll
 
   &::-webkit-scrollbar
@@ -735,9 +775,14 @@ footer
 //HELPER CLASSES
 
 .Tiny
-  display: none
+  // display: none
+  // height: 0px
+  margin-top: 0px
+  margin-bottom: 0px
   max-height: 0px
-  height: 0px
+  transition: margin-top 1s
+  transition: margin-bottom 1s
+  transition: max-height 1s
 
 .hidden
   max-width: 0px

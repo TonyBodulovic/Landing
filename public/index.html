@@ -8,11 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="Assets/Resume-Icon.ico">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
     
-    <link rel="icon" href="Assets/t.png">
+    <link rel="icon" href="Assets/PageIcon.png">
+
     <title>Tony Bodulovic</title>
 
 </head>
@@ -25,7 +25,7 @@
 
     <!-- VERSION No JS -->
 
-    <div id="NoJSBody">
+    <div class="hidden" id="NoJSBody">
 
         <nav>
             <div class="Logo">TB</div>
@@ -33,7 +33,7 @@
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#Skills">Skills</a></li>
-                <!-- <li ><a href="#Portfolio">Portfolio</a></li> -->
+                <li ><a href="#Projects">Projects</a></li>
                 <li><a href="#Contact">Contact</a></li>
     
             </ul>
@@ -68,14 +68,14 @@
 
     <!-- VERSION JS -->
 
-    <div class="hidden" id="JSBody">
+    <div  id="JSBody">
         <nav>
             <div class="Logo">TB</div>
             <ul>
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#Skills">Skills</a></li>
-                <!-- <li ><a href="#Portfolio">Portfolio</a></li> -->
+                <li ><a href="#Projects">Projects</a></li>
                 <li><a href="#Contact">Contact</a></li>
     
             </ul>
@@ -120,7 +120,7 @@
     
         <section id="About">
             <div class="AboutSection">
-                <div class="AboutLocked">
+                <div class="AboutLocked" id="AboutLocked">
                     <h1 style="grid-area: Header;">About Me</h1>
                     <div style="grid-area: Text">
                         <p>My introduction to programming was through video games, making custom configurations in the source engine. Of course this isn't really programming, but it was enough to get me interested in the real thing.</p>
@@ -185,6 +185,32 @@
                 <div class="AboutUnlocked Tiny" id="AboutUnlocked">
                     <p>There isn't much here yet...</p>
                     <p>Apparently computer science graduates aren't that interesting!</p>
+                    <p>There isn't much here yet...</p>
+                    <p>Apparently computer science graduates aren't that interesting!</p>
+                    <p>There isn't much here yet...</p>
+                    <p>Apparently computer science graduates aren't that interesting!</p>
+                    <p>There isn't much here yet...</p>
+                    <p>Apparently computer science graduates aren't that interesting!</p>
+                    <p>There isn't much here yet...</p>
+                    <p>Apparently computer science graduates aren't that interesting!</p>
+                    <p>There isn't much here yet...</p>
+                    <p>Apparently computer science graduates aren't that interesting!</p>
+                    <p>There isn't much here yet...</p>
+                    <p>Apparently computer science graduates aren't that interesting!</p>
+                    <p>There isn't much here yet...</p>
+                    <p>Apparently computer science graduates aren't that interesting!</p>
+                    <p>There isn't much here yet...</p>
+                    <p>Apparently computer science graduates aren't that interesting!</p>
+                    <p>There isn't much here yet...</p>
+                    <p>Apparently computer science graduates aren't that interesting!</p>
+                    <p>There isn't much here yet...</p>
+                    <p>Apparently computer science graduates aren't that interesting!</p>
+                    <p>There isn't much here yet...</p>
+                    <p>Apparently computer science graduates aren't that interesting!</p>
+                    <p>There isn't much here yet...</p>
+                    <p>Apparently computer science graduates aren't that interesting!</p>
+                    <p>There isn't much here yet...</p>
+                    <p>Apparently computer science graduates aren't that interesting!</p>
                 </div>
                 <div class="About-ShowMore">
                     <div class="About-ShowMoreSpacer"></div>
@@ -221,7 +247,7 @@
                     </button>
                 </div>
                 <div class="SkillTabs" id="SkillTabs">
-                    <div class="SkillTab">
+                    <div class="SkillTab" id="test">
                         <div class="Skill">
                             <div class="SkillTitle">
                                 <img src="Assets/Skill-Icons/html-css.svg" alt="">
@@ -285,7 +311,7 @@
                                 <div>
                                     <img class="bullet" src="Assets/bullet-point.svg" alt="">
                                     <p>SASS (Syntactically Awesome Style Sheets)</p>
-                                    <img src="Assets/sass.svg" alt="">
+                                    <img src="Assets/Skill-Icons/sass.svg" alt="">
                                 </div>
                                 <div>
                                     <img class="bullet" src="Assets/bullet-point.svg" alt="">
@@ -295,13 +321,13 @@
                                 <div>
                                     <img class="bullet" src="Assets/bullet-point.svg" alt="">
                                     <p>Tailwind CSS</p>
-                                    <img src="Assets/tailwind.svg" alt="">
+                                    <img src="Assets/Skill-Icons/tailwind.svg" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="Skill">
                             <div class="SkillTitle">
-                                <img style="border-radius: 10px;" src="Assets/typescript.svg" alt="">
+                                <img style="border-radius: 10px;" src="Assets/Skill-Icons/typescript.svg" alt="">
                                 <h2>Typescript</h2>
                                 <img src="Assets/full-star.svg" alt="">
                                 <img src="Assets/full-star.svg" alt="">
@@ -322,7 +348,7 @@
                         </div>
                         <div class="Skill">
                             <div class="SkillTitle">
-                                <img style="border-radius: 10px;" src="Assets/react.svg" alt="">
+                                <img style="border-radius: 10px;" src="Assets/Skill-Icons/react.svg" alt="">
                                 <h2>React</h2>
                                 <img src="Assets/full-star.svg" alt="">
                                 <img src="Assets/full-star.svg" alt="">
@@ -347,7 +373,7 @@
                         </div>
                         <div class="Skill">
                             <div class="SkillTitle">
-                                <img style="border-radius: 10px;" src="Assets/figma.svg" alt="">
+                                <img style="border-radius: 10px;" src="Assets/Skill-Icons/figma.svg" alt="">
                                 <h2>Figma</h2>
                                 <img src="Assets/full-star.svg" alt="">
                                 <img src="Assets/full-star.svg" alt="">
@@ -371,7 +397,7 @@
                     <div class="SkillTab">
                         <div class="Skill">
                             <div class="SkillTitle">
-                                <img src="Assets/python.svg" alt="">
+                                <img src="Assets/Skill-Icons/python.svg" alt="">
                                 <h2>Python</h2>
                                 <img src="Assets/full-star.svg" alt="">
                                 <img src="Assets/full-star.svg" alt="">
@@ -396,7 +422,7 @@
                         </div>
                         <div class="Skill">
                             <div class="SkillTitle">
-                                <img src="Assets/java.svg" alt="">
+                                <img src="Assets/Skill-Icons/java.svg" alt="">
                                 <h2>Java</h2>
                                 <img src="Assets/full-star.svg" alt="">
                                 <img src="Assets/full-star.svg" alt="">
@@ -421,7 +447,7 @@
                         </div>
                         <div class="Skill">
                             <div class="SkillTitle">
-                                <img src="Assets/c.svg" alt="">
+                                <img src="Assets/Skill-Icons/c.svg" alt="">
                                 <h2>C / C++</h2>
                                 <img src="Assets/full-star.svg" alt="">
                                 <img src="Assets/full-star.svg" alt="">
@@ -446,7 +472,7 @@
                         </div>
                         <div class="Skill">
                             <div class="SkillTitle">
-                                <img src="Assets/sql.svg" alt="">
+                                <img src="Assets/Skill-Icons/sql.svg" alt="">
                                 <h2>SQL</h2>
                                 <img src="Assets/full-star.svg" alt="">
                                 <img src="Assets/full-star.svg" alt="">
@@ -469,7 +495,7 @@
                     <div class="SkillTab">
                         <div class="Skill">
                             <div class="SkillTitle">
-                                <img src="Assets/git.svg" alt="">
+                                <img src="Assets/Skill-Icons/git.svg" alt="">
                                 <h2>Git & GitHub</h2>
                                 <img src="Assets/full-star.svg" alt="">
                                 <img src="Assets/full-star.svg" alt="">
@@ -494,7 +520,7 @@
                         </div>
                         <div class="Skill">
                             <div class="SkillTitle">
-                                <img src="Assets/firebase.svg" alt="">
+                                <img src="Assets/Skill-Icons/firebase.svg" alt="">
                                 <h2>Firebase</h2>
                                 <img src="Assets/full-star.svg" alt="">
                                 <img src="Assets/full-star.svg" alt="">
@@ -519,7 +545,7 @@
                         </div>
                         <div class="Skill">
                             <div class="SkillTitle">
-                                <img src="Assets/vscode.svg" alt="">
+                                <img src="Assets/Skill-Icons/vscode.svg" alt="">
                                 <h2>VSCode</h2>
                                 <img src="Assets/full-star.svg" alt="">
                                 <img src="Assets/full-star.svg" alt="">
@@ -544,7 +570,7 @@
                         </div>
                         <div class="Skill">
                             <div class="SkillTitle">
-                                <img src="Assets/apache.svg" alt="">
+                                <img src="Assets/Skill-Icons/apache.svg" alt="">
                                 <h2>Apache</h2>
                                 <img src="Assets/full-star.svg" alt="">
                                 <img src="Assets/full-star.svg" alt="">
@@ -582,12 +608,12 @@
                                 <div>
                                     <img class="bullet" src="Assets/bullet-point.svg" alt="">
                                     <p>GIMP (GNU Image Manipulation Program)</p>
-                                    <img src="Assets/gimp.svg" alt="">
+                                    <img src="Assets/Skill-Icons/gimp.svg" alt="">
                                 </div>
                                 <div>
                                     <img class="bullet" src="Assets/bullet-point.svg" alt="">
                                     <p>Adobe Photoshop</p>
-                                    <img src="Assets/photoshop.svg" alt="">
+                                    <img src="Assets/Skill-Icons/photoshop.svg" alt="">
                                 </div>
                                 <div>
                                     <img class="bullet" src="Assets/bullet-point.svg" alt="">
@@ -597,7 +623,7 @@
                         </div>
                         <div class="Skill">
                             <div class="SkillTitle">
-                                <img src="Assets/virtualbox.svg" alt="">
+                                <img src="Assets/Skill-Icons/virtualbox.svg" alt="">
                                 <h2>VirtualBox</h2>
                                 <img src="Assets/full-star.svg" alt="">
                                 <img src="Assets/full-star.svg" alt="">
@@ -620,12 +646,156 @@
                                 </div>
                             </div>  
                         </div>
+                        <div class="Skill">
+                            <div class="SkillTitle">
+                                <img src="Assets/Skill-Icons/html-css.svg" alt="">
+                                <h2>HTML & CSS</h2>
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                            </div>
+                            <div class="SkillDescription">
+                                <div>
+                                    <img class="bullet" src="Assets/bullet-point.svg" alt="">
+                                    <p>Designing a layout for a website</p>
+                                </div>
+                                <div>
+                                    <img class="bullet" src="Assets/bullet-point.svg" alt="">
+                                    <p>Implementing customs styles</p>
+                                </div>
+                                <div>
+                                    <img class="bullet" src="Assets/bullet-point.svg" alt="">  
+                                    <p>Creating responsive features</p>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="Skill">
+                            <div class="SkillTitle">
+                                <img style="border-radius: 10px;" src="Assets/Skill-Icons/js.svg" alt="">
+                                <h2>Javascript</h2>
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/half-star.svg" alt="">
+                            </div>
+                            <div class="SkillDescription">
+                                <div>
+                                    <img class="bullet" src="Assets/bullet-point.svg" alt="">
+                                    <p>Adding onclick() functionality</p>
+                                </div>
+                                <div>
+                                    <img class="bullet" src="Assets/bullet-point.svg" alt="">
+                                    <p>Binding event listeners to items</p>
+                                </div>
+                                <div>
+                                    <img class="bullet" src="Assets/bullet-point.svg" alt="">
+                                    <p>Automating element creation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Skill">
+                            <div class="SkillTitle">
+                                <h2>CSS Extensions</h2>
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                            </div>
+                            <div class="SkillDescription">
+                                <div>
+                                    <img class="bullet" src="Assets/bullet-point.svg" alt="">
+                                    <p>SASS (Syntactically Awesome Style Sheets)</p>
+                                    <img src="Assets/Skill-Icons/sass.svg" alt="">
+                                </div>
+                                <div>
+                                    <img class="bullet" src="Assets/bullet-point.svg" alt="">
+                                    <p>Less.js</p>
+                                    <img src="Assets/less.svg" alt="">
+                                </div>
+                                <div>
+                                    <img class="bullet" src="Assets/bullet-point.svg" alt="">
+                                    <p>Tailwind CSS</p>
+                                    <img src="Assets/Skill-Icons/tailwind.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Skill">
+                            <div class="SkillTitle">
+                                <img style="border-radius: 10px;" src="Assets/Skill-Icons/typescript.svg" alt="">
+                                <h2>Typescript</h2>
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/empty-star.svg" alt="">
+                            </div>
+                            <div class="SkillDescription">
+                                <div>
+                                    <img src="Assets/bullet-point.svg" alt="">
+                                    <p>Converting vanilla JS to TS</p>
+                                </div>
+                                <div>
+                                    <img src="Assets/bullet-point.svg" alt="">
+                                    <p>Improving clarity and reducing debug time</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Skill">
+                            <div class="SkillTitle">
+                                <img style="border-radius: 10px;" src="Assets/Skill-Icons/react.svg" alt="">
+                                <h2>React</h2>
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/empty-star.svg" alt="">
+                            </div>
+                            <div class="SkillDescription">
+                                <div>
+                                    <img src="Assets/bullet-point.svg" alt="">
+                                    <p>Creating reusable components</p>
+                                </div>
+                                <div>
+                                    <img src="Assets/bullet-point.svg" alt="">
+                                    <p>Implementing React hooks</p>
+                                </div>
+                                <div>
+                                    <img src="Assets/bullet-point.svg" alt="">
+                                    <p>Installing the react framework with npm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Skill">
+                            <div class="SkillTitle">
+                                <img style="border-radius: 10px;" src="Assets/Skill-Icons/figma.svg" alt="">
+                                <h2>Figma</h2>
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/full-star.svg" alt="">
+                                <img src="Assets/half-star.svg" alt="">
+                            </div>
+                            <div class="SkillDescription">
+                                <div>
+                                    <img src="Assets/bullet-point.svg" alt="">
+                                    <p>Designing a website layout</p>
+                                </div>
+                                <div>
+                                    <img src="Assets/bullet-point.svg" alt="">
+                                    <p>Exporting and using the layout as a template</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     
-        <section style="display:none;" id="Portfolio">
+        <section style="display:none;" id="Projects">
             Placeholder
         </section>
     

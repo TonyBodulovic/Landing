@@ -1,10 +1,23 @@
 
+document.addEventListener("DOMContentLoaded",function(){
+    abouttoggled = false;
+});
 
 function abouttoggle(){
 
     document.getElementById("AboutUnlocked").classList.toggle("Tiny");
     document.getElementById("About-ShowMore").classList.toggle("hidden");
     document.getElementById("About-ShowLess").classList.toggle("hidden");
+    abouttoggled = !abouttoggled;
+    if (!abouttoggled){
+        document.getElementById("AboutLocked").scrollIntoView(true);
+    }
+    else{
+        setTimeout(function(){
+            document.getElementById("AboutUnlocked").scrollIntoView(true);
+        },500);
+        
+    }
 }
 
 //CAROUSEL
@@ -68,8 +81,7 @@ function setskilltab(newtab){
     }
     skilltabpicker_buttons[currentskilltab-1].classList.toggle("SkillTabPicker-Selected");
     skilltabpicker_buttons[newtab-1].classList.toggle("SkillTabPicker-Selected");
-    skilltabs.scrollLeft = skilltabs.offsetWidth * (newtab-1);
-
+    skilltabs.scrollLeft = (skilltabs.offsetWidth - (skilltabs.offsetWidth - skilltabs.clientWidth)) * (newtab-1);
     currentskilltab = newtab;
 
 }
