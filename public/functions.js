@@ -27,6 +27,7 @@ var carousel_itemtitles = document.getElementById("About-CarouselTitles");
 var carousel_info = document.getElementById("About-CarouselInfo");
 var carousel_infopopup = document.getElementById("About-CarouselInfoPopup");
 var carousel_infopopup_descriptions = document.getElementById("About-CarouselInfoPopupList");
+var carousel_infostatic_descriptions = document.getElementById("About-CarouselInfoStaticList");
 
 var carousel_slidecount = document.getElementById("About-Carousel").dataset.slidecount;
 var carousel_currentslide = 1;
@@ -41,6 +42,7 @@ function nextcarouselitem(){
         carousel_itemtitles.scrollLeft += carousel_itemtitles.offsetWidth;
         carousel_currentslide +=1
     }
+    carousel_infostatic_descriptions.scrollLeft = (carousel_currentslide-1) * (carousel_infostatic_descriptions.offsetWidth)
 }
 
 function prevcarouselitem(){
@@ -53,6 +55,7 @@ function prevcarouselitem(){
         carousel_itemtitles.scrollLeft -= carousel_itemtitles.offsetWidth;
         carousel_currentslide -=1
     }
+    carousel_infostatic_descriptions.scrollLeft = (carousel_currentslide-1) * (carousel_infostatic_descriptions.offsetWidth)
 }
 
 function toggle_aboutcarouselinfo(){

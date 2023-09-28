@@ -28,6 +28,7 @@ html[data-theme=blue] {
 
 html {
   background-color: var(--background);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-family: Source Sans Pro;
   width: 100dvw;
   overflow: hidden;
@@ -55,17 +56,14 @@ body::-webkit-scrollbar-thumb {
   background: var(--primarytext);
 }
 
-.nomargin {
-  margin: 0px;
-}
-
-.nopad {
-  padding: 0px;
-}
-
 p {
   color: var(--primarytext);
   font-size: 1.3rem;
+}
+@media (max-width: 1200px) {
+  p {
+    font-size: 1.2rem;
+  }
 }
 
 h1 {
@@ -112,10 +110,8 @@ nav a {
   font-size: 1.5rem;
   color: var(--primarytext);
   transition: color 0.25s linear;
-  transition: transform 0.25s linear;
 }
 nav a:hover {
-  transform: scale(1.1, 1.1);
   color: white;
 }
 
@@ -155,6 +151,11 @@ aside img {
   align-self: center;
   border-radius: 25%;
 }
+@media (max-width: 1500px) {
+  aside img {
+    height: 20px;
+  }
+}
 aside img:hover {
   cursor: pointer;
   background: var(--secondary);
@@ -172,7 +173,7 @@ aside img:first-child {
   display: flex;
   position: absolute;
   left: 50px;
-  top: 15px;
+  top: -10px;
   bottom: 0;
   white-space: nowrap;
 }
@@ -199,7 +200,7 @@ aside img:first-child {
   border-top: 8px solid transparent;
   border-right: 8px solid var(--secondary);
   border-bottom: 8px solid transparent;
-  top: 25%;
+  top: 17px;
   left: -8px;
 }
 
@@ -224,16 +225,28 @@ section {
 .HomeSection {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   column-gap: 150px;
   margin-top: -10px;
   width: fit-content;
 }
 .HomeSection h1 {
+  margin: 0px;
   font-size: 5.5rem;
 }
+@media (max-width: 1200px) {
+  .HomeSection h1 {
+    font-size: 4.5rem;
+  }
+}
 .HomeSection h2 {
+  margin: 0px;
   font-size: 2.5rem;
+}
+@media (max-width: 1200px) {
+  .HomeSection h2 {
+    font-size: 2rem;
+  }
 }
 .HomeSection p {
   max-width: 45rem;
@@ -244,7 +257,7 @@ section {
   -webkit-user-drag: none;
   justify-self: center;
   align-self: top;
-  height: clamp(50px, 175px, 10vw);
+  height: 175px;
   max-width: 100%;
   padding: 0px;
   margin-bottom: 40px;
@@ -252,17 +265,29 @@ section {
   border-radius: 20px;
   border: 3px solid var(--secondary);
 }
+@media (max-width: 1200px) {
+  .HomeSection img {
+    height: 125px;
+  }
+}
 
 .HomeSplitter {
-  width: 60%;
+  width: 950px;
   height: 2px;
   margin-top: 75px;
   background: linear-gradient(to left, var(--background) 10%, var(--primary));
+}
+@media (max-width: 1200px) {
+  .HomeSplitter {
+    width: 800px;
+  }
 }
 
 .AboutSection {
   display: flex;
   flex-direction: column;
+  margin-left: 100px;
+  margin-right: 30px;
 }
 .AboutSection h1 {
   font-size: 4rem;
@@ -279,6 +304,12 @@ section {
   scroll-margin-top: 200px;
   height: fit-content;
 }
+@media (max-width: 1050px) {
+  .AboutLocked {
+    grid-template-areas: "Header Header" "Text Text" "Carousel Info";
+    grid-template-rows: auto auto auto;
+  }
+}
 .AboutLocked h1 {
   margin: 0px;
 }
@@ -292,7 +323,7 @@ section {
   grid-area: Carousel;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto 1fr auto;
   justify-items: center;
   align-items: center;
   padding: 0px;
@@ -300,7 +331,12 @@ section {
   background-color: var(--primary);
   border-radius: 10px;
   border: 2px solid var(--secondary);
-  overflow: hidden;
+  overflow: visible;
+}
+@media (max-width: 1050px) {
+  .About-Carousel {
+    justify-self: center;
+  }
 }
 
 .About-CarouselTitlesContainer {
@@ -308,19 +344,20 @@ section {
   display: flex;
   overflow: hidden;
   margin: 0px;
-  margin-top: -5px;
+  margin-top: -2px;
   padding: 0px;
-  height: 70px;
+  max-height: 70px;
   width: 100%;
-  border-radius: 2px 2px 0px 0px;
+  border-radius: 8px 8px 0px 0px;
   background-color: var(--secondary);
 }
 
 .About-CarouselTitles {
   display: flex;
+  margin: 0px;
   min-height: 100%;
   min-width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 .About-CarouselTitles h2 {
   text-align: center;
@@ -344,6 +381,11 @@ section {
   height: 15px;
   width: 15px;
 }
+@media (max-width: 1050px) {
+  .About-CarouselInfo img {
+    display: none;
+  }
+}
 
 .About-CarouselInfoPopup {
   display: none;
@@ -362,6 +404,21 @@ section {
   border: 2px solid var(--accent);
   border-radius: 10px;
   background-color: var(--secondary);
+}
+@media (max-width: 1450px) {
+  .About-CarouselInfoPopup-Shown {
+    right: -50px;
+  }
+}
+@media (max-width: 1375px) {
+  .About-CarouselInfoPopup-Shown {
+    right: -15px;
+  }
+}
+@media (max-width: 1050px) {
+  .About-CarouselInfoPopup-Shown {
+    display: none;
+  }
 }
 .About-CarouselInfoPopup-Shown div {
   display: flex;
@@ -398,10 +455,65 @@ section {
   right: 88px;
 }
 
+.About-CarouselInfoStatic {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: "Info";
+  align-self: center;
+  margin-bottom: 150px;
+  height: 125px;
+  width: 275px;
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  background-color: var(--secondary);
+}
+@media (min-width: 1051px) {
+  .About-CarouselInfoStatic {
+    display: none;
+  }
+}
+.About-CarouselInfoStatic div {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin: 0px;
+  height: 90%;
+  width: calc(100% - 4px);
+  overflow: hidden;
+}
+.About-CarouselInfoStatic div p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.4;
+  min-height: 90%;
+  min-width: 100%;
+  margin: 0px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.About-CarouselInfoStatic::before {
+  position: absolute;
+  z-index: 2;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 12px solid transparent;
+  border-right: 12px solid var(--accent);
+  border-top: 12px solid transparent;
+  bottom: 30px;
+  left: -12px;
+}
+
 .About-CarouselSlides {
   display: flex;
   flex-direction: row;
   min-width: 100%;
+  min-height: 100%;
   overflow: hidden;
   scroll-behavior: smooth;
   border-bottom: 2px solid var(--secondary);
@@ -411,14 +523,17 @@ section {
   justify-content: center;
   align-items: center;
   min-width: 100%;
+  min-height: 100%;
   max-width: 100%;
   max-height: 100%;
 }
 .About-CarouselSlides img {
   justify-self: center;
   align-self: center;
-  max-width: 90%;
-  max-height: 90%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 92.5%;
+  max-height: 100%;
   border-radius: 4px;
 }
 
@@ -480,7 +595,8 @@ section {
 .AboutUnlocked {
   margin-top: 50px;
   margin-bottom: 50px;
-  max-height: 1000px;
+  height: fit-content;
+  max-height: 10000px;
   scroll-margin-top: 1500px;
   overflow: hidden;
   transition: margin-top 1s;
@@ -647,12 +763,17 @@ section {
   align-items: center;
   background-color: var(--primary);
   width: fit-content;
-  padding: 20px;
+  margin-top: 20px;
+  padding: 30px;
   border-radius: 20px;
+}
+.ContactWrapper div {
+  margin-top: 10px;
 }
 .ContactWrapper p {
   max-width: 35rem;
   text-align: center;
+  margin-top: 10px;
 }
 .ContactWrapper a {
   background-color: var(--secondary);
