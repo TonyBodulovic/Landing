@@ -1,10 +1,23 @@
 
+document.addEventListener("DOMContentLoaded",function(){
+    abouttoggled = false;
+});
 
 function abouttoggle(){
 
     document.getElementById("AboutUnlocked").classList.toggle("Tiny");
     document.getElementById("About-ShowMore").classList.toggle("hidden");
     document.getElementById("About-ShowLess").classList.toggle("hidden");
+    abouttoggled = !abouttoggled;
+    if (!abouttoggled){
+        document.getElementById("AboutLocked").scrollIntoView(true);
+    }
+    else{
+        setTimeout(function(){
+            document.getElementById("AboutUnlocked").scrollIntoView(true);
+        },500);
+        
+    }
 }
 
 //CAROUSEL
@@ -14,6 +27,7 @@ var carousel_itemtitles = document.getElementById("About-CarouselTitles");
 var carousel_info = document.getElementById("About-CarouselInfo");
 var carousel_infopopup = document.getElementById("About-CarouselInfoPopup");
 var carousel_infopopup_descriptions = document.getElementById("About-CarouselInfoPopupList");
+var carousel_infostatic_descriptions = document.getElementById("About-CarouselInfoStaticList");
 
 var carousel_slidecount = document.getElementById("About-Carousel").dataset.slidecount;
 var carousel_currentslide = 1;
@@ -28,6 +42,7 @@ function nextcarouselitem(){
         carousel_itemtitles.scrollLeft += carousel_itemtitles.offsetWidth;
         carousel_currentslide +=1
     }
+    carousel_infostatic_descriptions.scrollLeft = (carousel_currentslide-1) * (carousel_infostatic_descriptions.offsetWidth)
 }
 
 function prevcarouselitem(){
@@ -40,6 +55,7 @@ function prevcarouselitem(){
         carousel_itemtitles.scrollLeft -= carousel_itemtitles.offsetWidth;
         carousel_currentslide -=1
     }
+    carousel_infostatic_descriptions.scrollLeft = (carousel_currentslide-1) * (carousel_infostatic_descriptions.offsetWidth)
 }
 
 function toggle_aboutcarouselinfo(){
@@ -68,8 +84,7 @@ function setskilltab(newtab){
     }
     skilltabpicker_buttons[currentskilltab-1].classList.toggle("SkillTabPicker-Selected");
     skilltabpicker_buttons[newtab-1].classList.toggle("SkillTabPicker-Selected");
-    skilltabs.scrollLeft = skilltabs.offsetWidth * (newtab-1);
-
+    skilltabs.scrollLeft = (skilltabs.offsetWidth - (skilltabs.offsetWidth - skilltabs.clientWidth)) * (newtab-1);
     currentskilltab = newtab;
 
 }
@@ -87,4 +102,17 @@ function showdiscord(){
             discordpopup.classList.add("DiscordPopupHidden");
         }
     });
+}
+
+// Debug
+
+
+function debug(){
+
+    NoJS = document.getElementById("NoJSBody");
+    JS = document.getElementById("JSBody");
+
+    JS.classList.toggle("hidden");
+    NoJS.classList.toggle('hidden');
+
 }
